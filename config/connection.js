@@ -1,16 +1,17 @@
-require("dotenv").config();
+// require("dotenv").config();
 
-const keys = require("./keys");
-const userKey = keys.mySqlCred.user;
-const passwordKey = keys.mySqlCred.password;
+// const keys = require("./keys");
+// const userKey = keys.mySqlCred.user;
+// const passwordKey = keys.mySqlCred.password;
 
 const mysql = require("mysql");
+// console.log(keys);
 
 let connection = mysql.createConnection({
     host: "localhost",
-    port: process.env.PORT || 8080,
-    user: userKey,
-    password: passwordKey,
+    port: process.env.PORT,
+    user: "bootcamp_hw",
+    password: "bopbop",
     database: "burgers_db"
 });
 
@@ -21,5 +22,9 @@ connection.connect(function(error){
     }
     console.log("connected as id " + connection.threadId);
 });
+
+connection.query("SELECT * FROM burgers", function(results){
+    console.log(results);
+})
 
 module.exports = connection;

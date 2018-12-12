@@ -1,10 +1,12 @@
 let connection = require("./connection");
 
-const orm = {
+let orm = {
     selectAll: function(table, modelCb) {
-        let queryString = `SELECT * FROM ${table};`;
+        let queryString = "SELECT * FROM " + table + " ;";
         connection.query(queryString, function (err, results){
-            if (err) throw error;
+            if (err) {
+                throw err;
+            }
             modelCb(results);
             console.log(results);
         });
@@ -19,5 +21,7 @@ const orm = {
 
     // }
 };
+
+console.log(orm.selectAll);
 
 module.exports = orm;
