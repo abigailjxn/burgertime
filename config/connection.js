@@ -2,13 +2,16 @@ require("dotenv").config();
 
 const keys = require("./keys");
 console.log(keys);
+const userKey = keys.mySqlCred.user;
+const passwordKey = keys.mySqlCred.password;
+
 const mysql = require("mysql");
 
 let connection = mysql.createConnection({
     host: "localhost",
     port: process.env.PORT || 8080,
-    user: "bootcamp_hw",
-    password: "bopbop",
+    user: userKey,
+    password: passwordKey,
     database: "burgers_db"
 });
 
@@ -18,4 +21,6 @@ connection.connect(function(error){
     return
     }
     console.log("connected as id " + connection.threadId);
-})
+});
+
+module.exports = connection;
