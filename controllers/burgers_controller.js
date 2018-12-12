@@ -8,7 +8,8 @@ router.get("/", function(req, res){
         let burgerObj = {
             burgers: data
         };
-        res.json(burgerObj);
+        // res.json(burgerObj);
+        res.render("index", burgerObj);
     })
 });
 
