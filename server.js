@@ -11,9 +11,9 @@ let connection = require("./config/connection");
 // orm.selectAll("burgers", function(){console.log(results)
 // });
 
-// let routes = require("./controllers/burgers_controller");
+let routes = require("./controllers/burgers_controller");
 
-// app.use(routes);
+app.use(routes);
 
 
 app.listen(PORT, function (){
