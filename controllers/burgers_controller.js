@@ -10,6 +10,13 @@ router.get("/", function(req, res){
         };
         res.json(burgerObj);
     })
+});
+
+router.post("/api/burgers", function(req, res){
+    burgerModel.insertOne(req.body.burgerName, function(result){
+        console.log("Burger Posted: " + result);
+    })
+    
 })
 
 

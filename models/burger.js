@@ -5,10 +5,12 @@ let burger = {
         orm.selectAll("burgers", function(res){
             controllerCb(res);
         })
-    }
-    // insertOne: function () {
-    //     orm.insertOne();
-    // },
+    },
+    insertOne: function (controllerCb) {
+        orm.insertOne("burgers", values, function(res){
+            controllerCb(res);
+        });
+    },
     // updateOne: function () {
     //     orm.updateOne();
     // }
