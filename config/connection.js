@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const keys = require("./keys");
-console.log(keys);
 const userKey = keys.mySqlCred.user;
 const passwordKey = keys.mySqlCred.password;
 
