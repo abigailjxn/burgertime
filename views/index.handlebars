@@ -2,13 +2,12 @@
 
     <h1>Burgertime</h1>
 
-    <form class="uk-form">
-        <textarea class="uk-textarea" type="text"></textarea>
-        <button class="uk-button" id="submit">Submit</button>
+    <form id="burgerform">
+        <textarea class="uk-textarea" type="text" id="burgerinput"></textarea>
+        <button class="uk-button uk-button-default" id="submit" style="margin: 1em; border-radius: 1em;">Submit</button>
     </form>
 
     <hr class="uk-divider-icon">
-
 
     <section class="uk-section-default uk-grid uk-child-width-1-2 uk-text-center uk-flex-center" uk-grid>
         <div id="noteaten" class="uk-container">
@@ -21,8 +20,6 @@
                 {{/each}}
             </div>
         </div>
-
-
 
         <div id="eaten" class="uk-container">
             <h2 class="uk-heading-divider">Eaten</h2>
