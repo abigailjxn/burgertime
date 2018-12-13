@@ -24,9 +24,9 @@ let orm = {
         })
     },
 
-    // updateOne: function () {
+    updateOne: function () {
 
-    // }
+    }
 };
 
 console.log(orm.selectAll);

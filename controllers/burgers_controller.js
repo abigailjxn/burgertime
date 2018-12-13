@@ -18,7 +18,7 @@ router.post("/api/burgers", function(req, res){
         console.log("Burger Posted: " + result);
     })
     
-})
+});
 
 
 module.exports = router;

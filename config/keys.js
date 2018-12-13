@@ -9,7 +9,6 @@ let mySqlCred = {
 };
 
 console.log(mySqlCred);
-console.log(process.env.ID);
-console.log(process.env.PSWD)
+
 
 module.exports = mySqlCred;

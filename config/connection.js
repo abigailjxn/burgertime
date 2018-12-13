@@ -1,11 +1,11 @@
 require("dotenv").config();
 
 const keys = require("./keys");
-const userKey = keys.mySqlCred.user;
-const passwordKey = keys.mySqlCred.password;
+const userKey = keys.user;
+const passwordKey = keys.password;
 
 const mysql = require("mysql");
-// console.log(keys);
+console.log(keys);
 
 let connection = mysql.createConnection({
     host: "localhost",
