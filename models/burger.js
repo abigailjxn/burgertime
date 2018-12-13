@@ -6,7 +6,7 @@ let burger = {
             controllerCb(res);
         })
     },
-    insertOne: function (controllerCb) {
+    insertOne: function (values, controllerCb) {
         orm.insertOne("burgers", values, function(res){
             controllerCb(res);
         });

@@ -1,6 +1,6 @@
 $("#burgerform").on("submit", function(event) {
   event.preventDefault();
-  
+
   let newBurger = {
       burgerName: $("#burgerinput").val().trim()
   };

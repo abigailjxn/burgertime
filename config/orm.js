@@ -14,8 +14,9 @@ let orm = {
     },
 
     insertOne: function (table, values, modelCb) {
+        let valString = `"${values}"`;
         let queryString = `INSERT INTO ${table} (burger_name)
-        VALUES (${values});`;
+        VALUES (${valString});`;
         connection.query(queryString, function(err, results){
             if (err) {
                 throw err
