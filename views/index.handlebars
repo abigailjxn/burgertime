@@ -1,11 +1,37 @@
-<h1>Burgertime</h1>
+<div class="uk-container uk-text-center">
 
-<form>
-    <input class="uk-textarea" type="text">
-    <button id="submit">Submit</button>
-</form>
+    <h1>Burgertime</h1>
 
-{{#each burgers}}
-    <p>{{burger_name}}</p><button>Omnom</button>
-{{/each}}
+    <form class="uk-form">
+        <textarea class="uk-textarea" type="text"></textarea>
+        <button class="uk-button" id="submit">Submit</button>
+    </form>
 
+    <hr class="uk-divider-icon">
+
+
+    <section class="uk-section-default uk-grid uk-child-width-1-2 uk-text-center uk-flex-center" uk-grid>
+        <div id="noteaten" class="uk-container">
+            <h2 class="uk-heading-divider">Not Eaten</h2>
+            <div>
+                {{#each burgers}}
+
+                <p>{{burger_name}}</p><button class="uk-button uk-button-secondary uk-button-small uk-inline">Omnom</button>
+
+                {{/each}}
+            </div>
+        </div>
+
+
+
+        <div id="eaten" class="uk-container">
+            <h2 class="uk-heading-divider">Eaten</h2>
+            <div>
+                {{#each burgers}}
+                <button class="uk-button uk-button-default" disabled>{{burger_name}}</button><hr class="uk-divider">
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+</div>
