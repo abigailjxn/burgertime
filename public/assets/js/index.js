@@ -15,3 +15,7 @@ $("#burgerform").on("submit", function(event) {
       }
   )
 });
+
+$(function() {
+    
+})

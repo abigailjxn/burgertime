@@ -25,8 +25,14 @@ let orm = {
         })
     },
 
-    updateOne: function () {
-
+    updateOne: function (table, values, condition, modelCb) {
+        let queryString = `UPDATE ${table} SET devoured = ${values} WHERE ${condition};`;
+        connection.query(queryString, function(err, results){
+            if (err) {
+                throw err;
+            };
+            modelCb(results);
+        })
     }
 };
 
