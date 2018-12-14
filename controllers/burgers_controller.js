@@ -20,11 +20,13 @@ router.post("/api/burgers", function(req, res){
     
 });
 
-router.put("api/burgers/:id", function(req, res){
-    let condition = `id = ${req.params.id}`;
+router.put("/api/burgers/:id", function(req, res){
+    let id = req.params.id;
+    +id;
+    let condition = `id = ${id}`;
+    // res.send("Got it");
 
     burgerModel.updateOne(
-        req.body.devoured,
         condition,
         function(result){
         if (result.changedRows === 0) {
@@ -32,7 +34,9 @@ router.put("api/burgers/:id", function(req, res){
         }
         res.status(200).end();
     })
-})
+});
+
+
 
 
 module.exports = router;

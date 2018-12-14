@@ -11,8 +11,9 @@ let burger = {
       controllerCb(res);
     });
   },
-  updateOne: function(values, condition, controllerCb) {
-    orm.updateOne("burgers", values, condition, function(res) {
+  updateOne: function(condition, controllerCb) {
+      console.log(condition);
+    orm.updateOne("burgers", true, condition, function(res) {
       controllerCb(res);
     });
   }

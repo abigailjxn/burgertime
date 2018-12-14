@@ -18,6 +18,18 @@ $("#burgerform").on("submit", function(event) {
 
 $("#devourbtn").on("click", function(event) {
     event.preventDefault();
+    console.log("Clicked");
     let id = $(this).data("id");
-    let devourState = $(this).data()
+    let devourState = $(this).data("devourState");
+
+    $.ajax({
+        method: "PUT",
+        url: "/api/burgers/" + id,
+       
+    }).then(
+        function(){
+            console.log("Changed Devoured state to: " + devourState);
+            location.reload();
+        }
+    )
 })
