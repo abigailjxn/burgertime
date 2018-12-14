@@ -12,7 +12,7 @@ let burger = {
     });
   },
   updateOne: function(condition, controllerCb) {
-      console.log(condition);
+      // console.log(condition);
     orm.updateOne("burgers", true, condition, function(res) {
       controllerCb(res);
     });
