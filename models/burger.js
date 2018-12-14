@@ -19,6 +19,4 @@ let burger = {
   }
 };
 
-// console.log(burger.selectAll);
-
 module.exports = burger;

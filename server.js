@@ -14,13 +14,6 @@ let exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-let connection = require("./config/connection");
-
-
-// let orm = require("./config/orm");
-// orm.selectAll("burgers", function(){console.log(results)
-// });
-
 let routes = require("./controllers/burgers_controller");
 
 app.use(routes);

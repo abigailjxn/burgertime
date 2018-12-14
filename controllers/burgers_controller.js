@@ -8,7 +8,7 @@ router.get("/", function(req, res){
         let burgerObj = {
             burgers: data
         };
-       console.log(burgerObj)
+    //    console.log(burgerObj)
         res.render("index", burgerObj);
     })
 });
@@ -25,7 +25,6 @@ router.put("/api/burgers/:id", function(req, res){
     let id = req.params.id;
     +id;
     let condition = `id = ${id}`;
-    // res.send("Got it");
 
     burgerModel.updateOne(
         condition,
@@ -36,8 +35,5 @@ router.put("/api/burgers/:id", function(req, res){
         res.status(200).end();
     })
 });
-
-
-
 
 module.exports = router;

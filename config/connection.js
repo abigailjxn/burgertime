@@ -23,11 +23,4 @@ connection.connect(function(error){
     console.log("connected as id " + connection.threadId);
 });
 
-// connection.query("SELECT * FROM burgers", function(err, result){
-//     if (err) {
-//         throw err;
-//     }
-//     console.log("The results are: " + result);
-// })
-
 module.exports = connection;

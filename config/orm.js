@@ -36,6 +36,4 @@ let orm = {
     }
 };
 
-console.log(orm.selectAll);
-
 module.exports = orm;
