@@ -8,7 +8,7 @@ router.get("/", function(req, res){
         let burgerObj = {
             burgers: data
         };
-        // res.json(burgerObj);
+       console.log(burgerObj)
         res.render("index", burgerObj);
     })
 });
@@ -22,7 +22,11 @@ router.post("/api/burgers", function(req, res){
 
 router.put("api/burgers/:id", function(req, res){
     let condition = `id = ${req.params.id}`;
-    burgerModel.updateOne(req.body.devoured, condition, function(result){
+
+    burgerModel.updateOne(
+        req.body.devoured,
+        condition,
+        function(result){
         if (result.changedRows === 0) {
             res.status(404).end();
         }

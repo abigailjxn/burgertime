@@ -1,0 +1,10 @@
+  {{#if devoured}}
+  
+  <button class="uk-button uk-button-default" disabled>{{burger_name}}</button><hr class="uk-divider">
+
+  {{else}}
+ <p>{{burger_name}}</p>
+  <button id="devourbtn" data-id="{{id}}" data-devourState="{{devoured}}"class="uk-button uk-button-secondary uk-button-small uk-inline">Omnom</button>
+  
+
+  {{/if}}

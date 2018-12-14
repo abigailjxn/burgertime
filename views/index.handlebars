@@ -13,20 +13,26 @@
         <div id="noteaten" class="uk-container">
             <h2 class="uk-heading-divider">Not Eaten</h2>
             <div>
+
                 {{#each burgers}}
-
-                <p>{{burger_name}}</p><button class="uk-button uk-button-secondary uk-button-small uk-inline">Omnom</button>
-
+                    {{#unless devoured}}
+                        {{> burgers/burger-block eaten=false}}
+                    {{/unless}}
                 {{/each}}
+
             </div>
         </div>
 
         <div id="eaten" class="uk-container">
             <h2 class="uk-heading-divider">Eaten</h2>
             <div>
+
                 {{#each burgers}}
-                <button class="uk-button uk-button-default" disabled>{{burger_name}}</button><hr class="uk-divider">
+                    {{#if devoured}}
+                        {{> burgers/burger-block eaten=true}}
+                    {{/if}}
                 {{/each}}
+
             </div>
         </div>
     </section>
