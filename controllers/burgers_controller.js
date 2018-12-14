@@ -16,6 +16,7 @@ router.get("/", function(req, res){
 router.post("/api/burgers", function(req, res){
     burgerModel.insertOne(req.body.burgerName, function(result){
         console.log("Burger Posted: " + result);
+        res.status(200).end();
     })
     
 });
